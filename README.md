@@ -6,6 +6,17 @@ instructions, go to [Installation](#installation). Otherwise, keep
 reading to learn why you should run ComfyUI in Docker, and why this
 solution in particular may be the best fit for most use cases.
 
+## Table of Contents
+
+- [Features](#features)
+- [Why you need Docker](#why-you-need-docker)
+- [Why you should pick this solution in particular](#why-you-should-pick-this-solution-in-particular)
+- [Why is it not built into ComfyUI?](#why-is-it-not-built-into-comfyui)
+- [Installation](#installation)
+  - [Setup](#setup)
+  - [Migrating](#migrating)
+  - [Updating](#updating)
+
 ## Features
 
 This project aims to bring ComfyUI to Docker without adding or
