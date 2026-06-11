@@ -48,13 +48,16 @@ done
 # custom node) and also install any user-defined dependencies specified in
 # PIP_EXTRA_PACKAGES.
 echo "[entrypoint] Updating Python dependencies..."
+
+# Target COmfyUI's own requirements.txt and all requirements.txt
+# scanned from the custom_nodes directory
+pip_requirements_flags="-r requirements.txt $(find custom_nodes -mindepth 2 -maxdepth 2 -type f -name requirements.txt -printf "-r '%p' ")"
+
 su -c "
    pip install                                   \\
-        --no-cache-dir                           \\
         --disable-pip-version-check              \\
         --extra-index-url '$PIP_EXTRA_INDEX_URL' \\
-        -r requirements.txt                      \\
-        $(find custom_nodes -mindepth 2 -maxdepth 2 -type f -name requirements.txt -printf "-r '%p' ") \\
+        $pip_requirements_flags                   \\
         $PIP_EXTRA_PACKAGES
 " comfyui \
     || echo "[entrypoint] Failed to install dependencies, starting anyway" >&2
