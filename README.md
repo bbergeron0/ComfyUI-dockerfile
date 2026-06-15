@@ -81,6 +81,8 @@ have the same goals and ambitions as this one:
   can easily be used as a drop-in replacement for a standard ComfyUI
   setup. You do not lose anything, whether it is user settings, custom
   node packs, models, or other data.
+- **🪨 Simple** - A single Dockerfile, a single image, with every
+  aspect carefully considered and engineered to the necessary degree.
 - **📚 Documented** - As a consequence of proposing this solution to
   the ComfyUI team, everything introduced by this solution is
   documented thoroughly. If something is unclear, it is an issue that
