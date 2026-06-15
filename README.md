@@ -16,6 +16,7 @@ solution in particular may be the best fit for most use cases.
   - [Setup](#setup)
   - [Migrating](#migrating)
   - [Updating](#updating)
+- [How to use](#how-to-use)
 
 ## Features
 
@@ -185,3 +186,34 @@ docker compose down -v
 docker compose build
 docker compose up
 ```
+## How to use
+
+ComfyUI-dockerfile is intended to be used much like a manual
+installation of vanilla ComfyUI:
+
+- It is installed and updated through cloning and pulling the
+  repository (see previous section for instructions).
+- Models and user data reside within the repository under `models/`,
+  `users/`, `input/`, `output/`, and similar directories.
+- Custom nodes can be installed directly into `custom_nodes/`.
+  - This setup works seamlessly with ComfyUI Manager.
+  - If a custom node package requires additional system or Python
+    dependencies, these can be specified in `compose.yaml`.
+
+Before anyone asks: no, I do not plan to publish images on Docker Hub
+just yet, although that is planned eventually. There are several
+reasons for not doing so at this stage:
+
+- These images are quite large, and I am unsure how much I can push to
+  Docker Hub under the free tier.
+- There is no upstream versioning scheme, meaning that virtually every
+  commit constitutes its own version. I do not want to build and
+  publish an image for every local commit as well as every upstream
+  commit.
+- Published images cannot be rebuilt with additional system
+  dependencies.
+- Publishing images was originally considered out of scope, as the
+  primary goal was to enable the ComfyUI team to adopt Docker
+  incrementally. While it is now unlikely that this work will be
+  merged upstream, I still believe this is the right approach for
+  implementing Docker support.
