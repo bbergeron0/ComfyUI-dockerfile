@@ -9,7 +9,7 @@
 # Users are free to try different base Python image tags (e.g., 3.13, alpine,
 # *-slim), but for maintainability, only one base version is officially
 # supported at a time.
-FROM python:3.12.12-trixie
+FROM python:3.12.13-trixie
 
 # Install cmake, which is an indirect installation dependencies. We also keep
 # the apt cache following the update so the image can be quickly rebuilt with
