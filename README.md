@@ -169,12 +169,12 @@ To import your data from an existing ComfyUI setup, simply move,
 hardlink, or copy the following directories from your previous setup
 into the Docker setup:
 
-- custom_nodes
-- models
-- input
-- output
-- temp
-- user
+- `custom_nodes`
+- `models`
+- `input`
+- `output`
+- `temp`
+- `user`
 
 ### Updating
 
