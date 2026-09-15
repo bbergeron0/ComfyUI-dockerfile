@@ -6,6 +6,12 @@ services:
     build:
       context: .
       args:
+        # As of 2026-09-15, ComfyUI affirms support for Python 3.12
+        # through 3.14, with 3.13 being the suggested version. Version
+        # 3.14 works but has a few caveats regarding custom nodes, and
+        # 3.12 is the recommended option if you encounter issues on
+        # 3.13 with certain older custom nodes.
+        #PYTHON_VERSION:
         # Declare additional system dependencies for custom nodes
         APT_EXTRA_PACKAGES:
         # Set the value of the --extra-index-url flag to select a specific CUDA,
